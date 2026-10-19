@@ -1,23 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bookmark of the Day - Revisit Your Bookmarks Like a Pro</title>
-  <meta name="description" content="Bookmark of the Day helps you revisit and manage your bookmarks efficiently. Available for Chrome and Firefox browsers." />
-  <meta name="keywords" content="bookmark manager, chrome extension, firefox add-on, productivity tool" />
-  <link rel="canonical" href="https://bookmarkoftheday.sandeepk.dev/" />
-  <meta property="og:title" content="Bookmark of the Day - Revisit Your Bookmarks Like a Pro" />
-  <meta property="og:description" content="Efficiently manage and revisit your bookmarks with Bookmark of the Day. Available for Chrome and Firefox." />
-  <meta property="og:image" content="https://bookmarkoftheday.sandeepk.dev/og-image.jpg" />
-  <meta property="og:url" content="https://bookmarkoftheday.sandeepk.dev/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="./custom.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171421">
+  <title>Bookmark of the Day — Rediscover Your Saved Bookmarks</title>
+  <meta name="description" content="Rediscover links you saved with Bookmark of the Day. Open a random bookmark, filter picks by website, and set a reminder to come back later.">
+  <link rel="canonical" href="https://bookmarkoftheday.sandeepk.dev/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="logo.png" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bookmark of the Day">
+  <meta property="og:title" content="Bookmark of the Day — Rediscover Your Saved Bookmarks">
+  <meta property="og:description" content="Open a random saved bookmark, filter picks by website, and set a reminder to come back later.">
+  <meta property="og:url" content="https://bookmarkoftheday.sandeepk.dev/">
+  <meta property="og:image" content="https://bookmarkoftheday.sandeepk.dev/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bookmark of the Day helps you rediscover saved links, one bookmark at a time.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bookmark of the Day — Rediscover Your Saved Bookmarks">
+  <meta name="twitter:description" content="Open a random saved bookmark, filter picks by website, and set a reminder to come back later.">
+  <meta name="twitter:image" content="https://bookmarkoftheday.sandeepk.dev/og-image.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bookmark of the Day",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Chrome, Firefox",
+      "description": "Rediscover saved bookmarks by opening a random link, filtering by website, and setting reminders.",
+      "url": "https://bookmarkoftheday.sandeepk.dev/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QVZ0ZKM78"></script>
   <script>
@@ -27,49 +51,114 @@
     gtag('config', 'G-4QVZ0ZKM78');
   </script>
 </head>
-
 <body>
-  <div class="sc-iBkjds kZwfCQ" id="screen_1">
-    <div class="sc-ftvSup fwXMPX">
-      <div class="sc-bczRLJ ctRBXT">
-        <div class="sc-gsnTZi xOVhP"></div>
-        <div class="sc-dkzDqf fvWEpK"></div>
-        <div class="sc-hKMtZM ezTSZW"></div>
-        <div class="sc-eCYdqJ jRWpWZ"></div>
-        <div class="sc-jSMfEi ibGnlC"></div>
-        <div class="sc-gKXOVf FBsKG"></div>
-      </div>
-    </div>
-    <div class="sc-papXJ yBsKs">
-      <div class="sc-jqUVSM bA-da-dW">
-        <div class="sc-iqcoie fZcXHS"><img src="logo.png" alt="Bookmark of the Day logo" /></div>
-        <div class="sc-crXcEl kUVXgh">
-          Revisit your<br />Bookmarks like pro!
-        </div>
-        <div class="button-container">
-          <a type="button" class="btn btn-info sc-evZas csRDwh" style="text-decoration: none;"
-            href="https://chrome.google.com/webstore/detail/bookmarkoftheday/jldlnlkjghmljkcbdebeebbafjgdmllc"
-            target="_blank" onclick="gtag('event', 'click', {'event_category': 'Extension', 'event_label': 'Chrome'});">
-            Get it on Chrome Webstore
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bookmark of the Day home">
+      <img src="logo.png" alt="Bookmark of the Day" width="320" height="41">
+    </a>
+    <a class="header-link" href="#how-it-works">How it works</a>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A second chance for the links you saved</p>
+        <h1 id="hero-title">Rediscover your bookmarks, <span>one at a time.</span></h1>
+        <p class="hero-description">Bookmark of the Day opens a random link from your saved bookmarks. Shuffle for another, filter by website, or set a reminder for later.</p>
+        <div class="store-links" aria-label="Get Bookmark of the Day">
+          <a class="button button-primary" href="https://chromewebstore.google.com/detail/bookmarkoftheday/jldlnlkjghmljkcbdebeebbafjgdmllc" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'install_click', {'browser': 'Chrome'});">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 5h8.2a5.98 5.98 0 0 1 5.13 2.9l2.1-3.64A9.96 9.96 0 0 0 12 2Zm-9.16 7a10 10 0 0 0 8.66 13l4.1-7.1a5.96 5.96 0 0 1-.73-4.4H3.34L2.84 9Zm11.32 12.16A10 10 0 0 0 22 12c0-.69-.07-1.36-.2-2l-4.1 7.1a5.99 5.99 0 0 1-3.54 2.06ZM12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></svg>
+            Add to Chrome
           </a>
-          <a type="button" class="btn btn-info sc-evZas csRDwh" style="text-decoration: none;"
-            href="https://addons.mozilla.org/en-US/firefox/addon/bookmark-of-the-day/"
-            target="_blank" onclick="gtag('event', 'click', {'event_category': 'Extension', 'event_label': 'Firefox'});">
-            Get it on Firefox Add-ons
+          <a class="button button-secondary" href="https://addons.mozilla.org/en-US/firefox/addon/bookmark-of-the-day/" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'install_click', {'browser': 'Firefox'});">
+            Get it for Firefox
           </a>
         </div>
+        <p class="privacy-note">No account needed. The Chrome extension reads your bookmarks locally.</p>
       </div>
-      <div class="sc-kDDrLX kKGFiC">
-        <img src="landing_image.png" alt="Bookmark of the Day landing image" />
+
+      <div class="bookmark-preview" aria-hidden="true">
+        <div class="preview-topline"><span class="preview-dot"></span><span>Your saved links</span><span class="preview-menu" aria-hidden="true">•••</span></div>
+        <article class="preview-card preview-card-active">
+          <span class="preview-label">A pick for today</span>
+          <h2>A good idea deserves another look.</h2>
+          <p>One saved link, brought back into view.</p>
+          <div class="preview-footer"><span class="preview-favicon">↗</span><span>Your bookmarks</span></div>
+        </article>
+        <div class="preview-card preview-card-back"><span class="preview-line"></span><span class="preview-line preview-line-short"></span></div>
+        <span class="sparkle sparkle-one" aria-hidden="true">✦</span>
+        <span class="sparkle sparkle-two" aria-hidden="true">✧</span>
       </div>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Bookmark of the Day. All rights reserved.</p>
-      <p>Support: <a href="mailto:bookmarkoftheday-help@sandeepk.dev">bookmarkoftheday-help@sandeepk.dev</a></p>
-    </div>
+    </section>
+
+    <section class="benefits section-shell" aria-labelledby="benefits-title">
+      <div class="section-heading">
+        <p class="eyebrow">Less collecting. More rediscovering.</p>
+        <h2 id="benefits-title">Make your saved links useful again.</h2>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <span class="benefit-number" aria-hidden="true">01</span>
+          <h3>Get a fresh pick</h3>
+          <p>Open a random bookmark and revisit the links you meant to read, watch, or try.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="benefit-number" aria-hidden="true">02</span>
+          <h3>Choose what shows up</h3>
+          <p>Filter your picks by website. Shuffle whenever you want a different bookmark.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="benefit-number" aria-hidden="true">03</span>
+          <h3>Come back when ready</h3>
+          <p>Set a one-hour reminder for a bookmark you want to revisit later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="how-it-works section-shell" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="eyebrow">Simple by design</p>
+        <h2 id="how-title">From saved to rediscovered in seconds.</h2>
+      </div>
+      <ol class="steps-list">
+        <li><span>1</span><div><h3>Install the extension</h3><p>Choose Chrome or Firefox from the links above.</p></div></li>
+        <li><span>2</span><div><h3>Open a bookmark</h3><p>Use the extension button or keyboard shortcut to get a random pick.</p></div></li>
+        <li><span>3</span><div><h3>Make it yours</h3><p>Filter by website, shuffle to another link, or set a reminder.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="faq section-shell" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">Good to know</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What does Bookmark of the Day do?</summary>
+          <p>It opens a random link from your browser bookmarks so saved pages are easier to rediscover. You can filter picks by website, shuffle, or set a reminder.</p>
+        </details>
+        <details>
+          <summary>Will I see the same bookmark over and over?</summary>
+          <p>The Chrome extension tracks its picks and avoids repeats until it has gone through the eligible bookmarks in your current rotation.</p>
+        </details>
+        <details>
+          <summary>Does the Chrome extension upload my bookmarks?</summary>
+          <p>No. The Chrome extension reads bookmarks through Chrome’s bookmarks API and stores its rotation locally in your browser. It does not need an account.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing-cta section-shell" aria-labelledby="closing-title">
+      <p class="eyebrow">Your next favorite link might already be saved.</p>
+      <h2 id="closing-title">Bring one back today.</h2>
+      <a class="button button-primary" href="https://chromewebstore.google.com/detail/bookmarkoftheday/jldlnlkjghmljkcbdebeebbafjgdmllc" target="_blank" rel="noopener noreferrer" onclick="gtag('event', 'install_click', {'browser': 'Chrome', 'position': 'footer'});">Add to Chrome</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Bookmark of the Day</span>
+    <a href="mailto:bookmarkoftheday-help@sandeepk.dev">Contact support</a>
   </footer>
 </body>
-
 </html>
